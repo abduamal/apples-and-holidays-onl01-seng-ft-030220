@@ -98,6 +98,8 @@ def all_holidays_with_bbq(holiday_hash)
     season.to_s.capitalize << ":"
     data.each do |holiday, items|
       items = items.join(", ")
+      holiday = holiday.to_s.split("_").map {|w| w.capitalize}.join(" ")<< ":"
+      puts "  " + holiday + " " + items
     end
   end
 end
